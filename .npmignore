@@ -1,0 +1,10 @@
+.*
+dist
+build
+conf
+node_modules
+src
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+DEVELOPER.md
+yarn.lock
