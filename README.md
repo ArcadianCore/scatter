@@ -21,13 +21,15 @@ Scatter is my personal project used to sharpen my skillset with respect to sever
 
 ## Motivation
 
-A few motivating and useful examples of how Scatter can be used. Spice this up with code blocks and potentially more screenshots.
+TODO
+<!-- A few motivating and useful examples of how Scatter can be used. Spice this up with code blocks and potentially more screenshots. -->
 
 ## Installation
 
-```bash
+TODO
+<!-- ```bash
 npm install scatter --save
-```
+``` -->
 
 ## Authors
 
@@ -47,6 +49,10 @@ Want to file a bug, contribute some code, or improve documentation? Excellent! R
 guidelines for [contributing][contributing] and please consult and adhere to our [code of conduct][coc].
 
 <!-- Markdown link & img dfn's -->
+[contributing]: CONTRIBUTING.md
+[coc]: CODE_OF_CONDUCT.md
+[wiki]: https://github.com/ArcadianCore/scatter/wiki
+
 [license-image]: http://img.shields.io/:license-mit-blue.svg?style=flat-square
 [license-url]: http://badges.mit-license.org
 
@@ -58,7 +64,6 @@ guidelines for [contributing][contributing] and please consult and adhere to our
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 
-[wiki]: https://github.com/ArcadianCore/scatter/wiki
 
 [coverage-image]: http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square
 [coverage-url]: https://coveralls.io/r/badges/badgerbadgerbadger
