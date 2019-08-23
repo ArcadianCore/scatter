@@ -1,0 +1,32 @@
+{
+    "extends": "../conf/tsconfig.base.json",
+    "compilerOptions": {
+        "extendedDiagnostics": true,
+        "outDir": "../out-tsc/spec",
+        "baseUrl": "../src",
+        "paths": {
+            "@scatter/*": [
+                "*"
+            ],
+        },
+        "types": [
+            "jasmine"
+        ],
+    },
+    // "files": [
+    //     "./cli/parseArgs.spec.ts",
+    //     "**/?(*.)(spec|test).ts?(x)",
+    // ],
+    "include": [
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.d.ts"
+    ],
+    "exclude": [
+        // "src",
+        // "test",
+        "node_modules"
+    ]
+}

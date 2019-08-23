@@ -1,0 +1,24 @@
+{
+    "extends": "../conf/tsconfig.base.json",
+    "compilerOptions": {
+        // baseUrl and paths are relative to the built directory, rather than the source directory.
+        "baseUrl": ".",
+        "paths": {
+            "@scatter/*": [
+                "./*"
+            ],
+        },
+    },
+    "include": [
+        "**/*.ts",
+    ],
+    "exclude": [
+        "lib",
+        "dist",
+        "test",
+        "build",
+        "node_modules",
+        "**/*.spec.ts",
+        "**/*.test.ts"
+    ]
+}

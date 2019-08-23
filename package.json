@@ -1,0 +1,80 @@
+{
+    "name": "scatter",
+    "productName": "Scatter",
+    "description": "A library of helpful Electron functions, classes, and extensions",
+    "version": "0.0.1",
+    "author": {
+        "name": "Arcadian Core"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ArcadianCore/scatter.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ArcadianCore/scatter/issues"
+    },
+    "dependencies": {
+        "minimist": "1.2.0"
+    },
+    "devDependencies": {
+        "@types/jasmine": "3.4.0",
+        "@types/minimist": "1.2.0",
+        "awesome-typescript-loader": "5.2.1",
+        "cross-env": "5.2.0",
+        "copyfiles": "",
+        "is-valid-path": "0.1.1",
+        "jasmine-core": "3.4.0",
+        "jasmine-spec-reporter": "4.2.1",
+        "karma": "4.2.0",
+        "karma-chrome-launcher": "3.0.0",
+        "karma-cli": "2.0.0",
+        "karma-coverage-istanbul-reporter": "2.1.0",
+        "karma-jasmine": "2.0.1",
+        "karma-jasmine-html-reporter": "1.4.2",
+        "npm-run-all": "4.1.5",
+        "prettier": "1.18.2",
+        "shx": "0.3.2",
+        "tslint": "5.19.0",
+        "tslint-config-prettier": "1.18.0",
+        "typescript": "3.5.3",
+        "uglifyjs-webpack-plugin": "2.2.0",
+        "webpack": "4.39.2",
+        "webpack-cli": "3.3.7"
+    },
+    "engines": {
+        "node": ">=12.8.1",
+        "yarn": ">=1.17.1"
+    },
+    "files": [
+        "./_bundles/**/*",
+        "./lib-commonjs/**/*",
+        "./lib-es6/**/*",
+        "LICENSE",
+        "README.md"
+    ],
+    "main": "./lib-commonjs/index.js",
+    "types": "./lib-commonjs/index.d.ts",
+    "scripts": {
+        "build": "npm-run-all clean build:common build:es6 webpack copy:package:json copy:docs",
+        "build:common": "tsc -p ./src/tsconfig.json -m commonjs --outdir ./dist/lib-commonjs",
+        "build:es6": "tsc -p ./src/tsconfig.json -m es6 --outDir ./dist/lib-es6",
+        "build:test": "tsc -p ./test/tsconfig.json -m commonjs --outDir ./out-tsc/spec",
+        "clean": "shx rm -rf dist _bundles lib-commonjs lib-es6 lib* out-tsc",
+        "copy:package:json": "node ./build/lib/npm/copy-trimmed-package-json.js ./dist",
+        "copy:docs": "copyfiles LICENSE README.md dist",
+        "hammer": "shx rm -rf node_modules && yarn install",
+        "lint": "tslint --config ./conf/tslint.json --project ./conf/tsconfig.json --force --format stylish",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "test": "npm-run-all clean build:test",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm test && npm run lint",
+        "preversion": "npm run lint",
+        "version": "npm run format && git add -A src",
+        "postversion": "git push && git push --tags",
+        "preinstall": "node build/lib/npm/preinstall.js",
+        "publish": "npm publish ./dist --dryrun",
+        "watch": "npm run webpack -- --watch",
+        "webpack": "webpack --config ./conf/webpack.config.js --display-error-details --progress"
+    }
+}

@@ -6,8 +6,8 @@
 /_bundles
 /lib*
 /dist
-/test
 /test/results
+/out-tsc
 
 # dependencies
 /node_modules

@@ -1,0 +1,16 @@
+cdgame=CD /D %GAME_FOLDER%
+clean=CD /D %GAME_FOLDER% && npm run clean
+cnode=CD /D %GAME_FOLDER% && rd /s/q node_modules
+rnode=CD /D %GAME_FOLDER% && rd /s/q node_modules && npm install && npm prune
+hot=CD /D %GAME_FOLDER% && npm run hot
+game=start %PACKED_GAME_FILE%
+pack=CD /D %GAME_FOLDER% && npm run package
+dev=CD /D %GAME_FOLDER% && npm run dev
+prod=CD /D %GAME_FOLDER% && npm run prod
+test=CD /D %GAME_FOLDER% && npm run test:all
+test-unit=CD /D %GAME_FOLDER% && npm run test:unit
+test-dom=CD /D %GAME_FOLDER% && npm run test:dom
+clean=CD /D %GAME_FOLDER% && npm run clean
+fork=CD /D %GAME_FOLDER% && npm run fork -- --config=./conf/fork.config.js
+list=CD /D %GAME_FOLDER% && npm run list
+lint=CD /D %GAME_FOLDER% && npm run lint
