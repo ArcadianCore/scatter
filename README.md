@@ -41,7 +41,7 @@ npm install scatter --save
 
 ## License
 
-Distributed under the MIT license.  See `License` for more information.
+Distributed under the MIT license.  See [`LICENSE`][license] for more information.
 
 ## Contributing
 
@@ -51,6 +51,7 @@ guidelines for [contributing][contributing] and please consult and adhere to our
 <!-- Markdown link & img dfn's -->
 [contributing]: CONTRIBUTING.md
 [coc]: CODE_OF_CONDUCT.md
+[license]: LICENSE
 [wiki]: https://github.com/ArcadianCore/scatter/wiki
 
 [license-image]: http://img.shields.io/:license-mit-blue.svg?style=flat-square
@@ -63,7 +64,6 @@ guidelines for [contributing][contributing] and please consult and adhere to our
 
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-
 
 [coverage-image]: http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square
 [coverage-url]: https://coveralls.io/r/badges/badgerbadgerbadger
